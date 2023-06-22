@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index1.css">
+	<title></title>
+	
+</head>
+<body>
+	<div class="head">
+		<div class="content">
+		
+		<!-- </div> -->
+	<!-- <div class="header"> -->
+		
+	<!-- </div> -->
+	<input style="font-size: 30px" class="header" id="text" readonly ></input>
+	<div onclick="displayNumber(this)" class="nut-click nut1">
+		<p class="nut" id="nut1">1</p>
+	</div>
+	<div onclick="displayNumber(this)" class="nut-click nut2">
+		<p  class="nut" data-number="2" id="nut2">2</p>
+	</div>
+	<div onclick="displayNumber(this)" class="nut-click nut3">
+		<p class="nut">3</p>
+	</div>
+	<div class="nutcong">
+		<p>+</p>
+	</div>
+	<div class="nut4">
+		<p>4</p>
+	</div>
+	<div class="nut5">
+		<p>5</p>
+	</div>
+	<div class="nut6">
+		<p>6</p>
+	</div>
+	<div class="nuttru">
+		<p>-</p>
+	</div>
+	<div class="nut7">
+		<p>7</p>
+	</div>
+	<div class="nut8">
+		<p>8</p>
+	</div>
+	<div class="nut9">
+		<p>9</p>
+	</div>
+	<div class="nutnhan">
+		<p>x</p>
+	</div>
+	<div class="nutc">
+		<p>c</p>
+	</div>
+	<div class="nut0">
+		<p>0</p>
+	</div>
+	<div class="nutbang">
+		<p>=</p>
+	</div>
+	<div class="nutchia">
+		<p>/</p>
+	</div>
+        </div>
+	</div>
+<script>
+function displayNumber (element){
+	<!-- document.getElementById('text').value = element.querySelector('.nut').innerHTML; -->
+}
+
+var elements = document.getElementsByClassName("nut-click");
+
+var myFunction = function() {
+    document.getElementById('text').value += this.querySelector('.nut').innerHTML;
+};
+
+for (var i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', myFunction, false);
+}
+ ;
+</script>
+</body>
+</html>
